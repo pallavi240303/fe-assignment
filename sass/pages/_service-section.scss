@@ -1,0 +1,68 @@
+.service-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .service-section__card-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    gap: 2rem;
+    margin-top: 7rem;
+
+    @include respond(sm){
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    @include respond(lg){
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .service-section__card {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      gap: 1.5rem;
+      box-shadow: $box-shadow-card;
+      text-align: center;
+
+      width: 31.3rem;
+      height: 33rem;
+      background-color: $primary-bg-color;
+      padding-bottom: 1rem;
+      padding-top: 2rem;
+
+      
+      @include respond(md) {
+        height: 38rem;
+        width: 38rem;
+        gap: 2rem;
+      }
+
+      @include respond(lg) {
+        gap: 2rem;
+        width: 30%;
+      }
+
+      .card__title {
+        margin: 0;
+        font-size: 2.6rem;
+        font-weight: 400;
+        color: $primary-purple-color;
+      }
+
+      .card__description {
+        margin: 0;
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $primary-desc-color;
+        padding: 0 1.5rem;
+      }
+    }
+  }
+}

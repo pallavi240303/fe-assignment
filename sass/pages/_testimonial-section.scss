@@ -1,0 +1,68 @@
+.feedback-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .feedback__carousel {
+    display: flex;
+    gap: 2.5rem;
+    overflow-x: auto;
+    padding: 1.5rem;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    max-width: 85vw;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .feedback__card {
+      scroll-snap-align: center;
+      box-shadow: $box-shadow-card;
+      
+      height: 38rem;
+      max-width: 28rem;
+
+      text-align: left;
+      padding-left: 2rem;
+      padding-right: 1rem;
+      gap: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      flex-shrink: 0;
+      
+      font-size: 1.5rem;
+      color: $primary-desc-color;
+
+        @include respond(sm){
+            max-width: 36.7rem;
+        }
+
+      .profile {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+        padding-top: 5rem;
+        gap: 1rem;
+        .description {
+          margin: 0;
+        }
+        .job__role {
+          font-size: 1.2rem;
+          font-weight: 400;
+          color: $primary-desc-color;
+        }
+      }
+    }
+  }
+  .testimony-carousel_navigation-arrows {
+    align-self: flex-end;
+    padding-right: 8%;
+  }
+}

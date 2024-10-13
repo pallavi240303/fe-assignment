@@ -1,0 +1,9 @@
+@import '../utils/variables';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: $base-font-size;
+}

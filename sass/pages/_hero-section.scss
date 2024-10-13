@@ -1,0 +1,54 @@
+
+@import '../utils/variables';
+@import '../utils/mixin';
+
+.hero-section{
+    background-image: url('/assets/images/hero-section-bg.webp');
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    gap: 2rem;
+    padding-top: 7.7rem;
+    color: $primary-bg-color;
+
+    .hero-section__heading{
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 5rem;
+        margin: 0 3rem;
+
+        @include respond(md){
+            width: 50%;
+        }
+        @include respond(lg){
+            width: 40%;
+        }
+    }
+
+    .hero-section__description{
+        width: 80%;
+        font-size: 1.6rem;
+        font-weight: 700;
+        margin-top: 0;
+
+        @include respond(md){
+            width: 40%;
+        }
+        @include respond(lg){
+            width: 30%;
+        }
+    }
+
+    // connect button and email input layout
+    .hero-section__connect{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 17rem;
+    }
+}

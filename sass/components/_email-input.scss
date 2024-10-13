@@ -1,0 +1,21 @@
+@import '../utils/variables';
+
+input{
+    border: $input-border;
+    
+    height: 5.2rem;
+    width: 30.2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    border-radius: 0.4rem;
+    padding-left: 1.5rem;
+
+    &::placeholder{
+        color: $primary-lightgray-color;
+    }
+
+    &:focus {
+        outline: none; 
+    }
+}

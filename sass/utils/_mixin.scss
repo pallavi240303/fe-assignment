@@ -1,0 +1,22 @@
+@import "variables";
+
+@mixin respond($breakpoint) {
+    
+    @if $breakpoint == sm {
+      @media (min-width: $small-screen) {
+        @content;
+      }
+    }
+
+    @else if $breakpoint == md {
+        @media (min-width: $medium-screen){
+            @content;
+        }
+    }
+
+    @else if $breakpoint == lg {
+      @media (min-width: $large-screen) {
+        @content;
+      }
+    }
+}

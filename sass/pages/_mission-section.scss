@@ -1,0 +1,49 @@
+.mission-section {
+  display: flex;
+  flex-direction: row;
+  color: $primary-bg-color;
+  margin-top: 7rem;
+
+  .mission {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    background-color: $primary-pink-color;
+
+    height: 67rem;
+    width: 100vw;
+    
+    .mission__heading{
+        font-size: 3rem;
+        font-weight: 700;
+        @include respond(md){
+            font-size: 4rem;
+        }
+    }
+
+    .mission__description{
+        padding-top: 2rem;
+        font-size: 1.6rem;
+        font-weight: 600;
+        width: 80%;
+        @include respond(md){
+            font-size: 2rem;
+        }
+    }
+    button{
+        margin-top: 4rem;
+        border: 0.2rem solid $primary-bg-color;
+    }
+  }
+  img{
+    display: none;
+    @include respond(lg){
+        display: block;
+        object-fit: cover;
+    
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import "../utils/variables";
+
+button {
+  padding: 1.5rem 3.4rem;
+
+  color: $primary-bg-color;
+  background-color: $primary-pink-color;
+
+  border-radius: 0.4rem;
+  border: none;
+
+  font-weight: 700;
+}

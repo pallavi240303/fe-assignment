@@ -1,0 +1,127 @@
+.team-section {
+  // Main container for the team section
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: left;
+  margin: 5rem 0;
+
+  // Carousel buttons for navigating through team cards
+  .carousel__buttons {
+    display: none;
+
+    @include respond(sm) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 2.1rem;
+      font-weight: 600;
+
+      .forward {
+        display: block;
+        cursor: pointer;
+
+        color: $primary-purple-color;
+        align-self: flex-end;
+        padding-right: 10%;
+      }
+
+      .backward {
+        display: block;
+        cursor: pointer;
+        color: $primary-purple-color;
+        align-self: flex-end;
+        padding-left: 10%;
+      }
+    }
+  }
+
+  // Container for team cards with horizontal scrolling
+  .team__card-container {
+    @include respond(sm) {
+      padding: 0 4rem 4rem 4rem;
+      display: flex;
+      gap: 2.5rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-snap-align: center;
+      max-width: 80vw;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    // Individual team card styles
+    .team__card {
+      margin-top: 2rem;
+
+      flex: 0 0 auto;
+
+      height: 31rem;
+      width: 22.4rem;
+      box-shadow: $box-shadow-card;
+
+      @include respond(sm) {
+        height: 46.8rem;
+        width: 33.7rem;
+      }
+
+      // Info section within the team card
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+        height: 16.4rem;
+        gap: 0.5rem;
+
+        @include respond(sm) {
+          padding-bottom: 4rem;
+          gap: 1rem;
+        }
+
+        // Main name heading
+        h2 {
+          margin: 0;
+          font-size: 1.6rem;
+          font-weight: 600;
+          color: $primary-purple-color;
+
+          @include respond(sm) {
+            font-size: 2.4rem;
+          }
+        }
+
+        // Subheading for the team member's role
+        h3 {
+          font-size: 1rem;
+          font-weight: 600;
+          margin-top: -0.1rem;
+          line-height: 0;
+          color: $primary-desc-color;
+
+          @include respond(sm) {
+            font-size: 1.4rem;
+          }
+        }
+
+        // Description paragraph
+        p {
+          margin-top: 0.8rem;
+          font-size: 1.1rem;
+          font-weight: 400;
+          line-height: 1.7rem;
+          color: $primary-desc-color;
+
+          @include respond(sm) {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+          }
+        }
+      }
+    }
+  }
+}
