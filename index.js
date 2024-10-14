@@ -1,4 +1,7 @@
+//team-section carousel
+
 document.addEventListener('DOMContentLoaded', function () {
+    
     const forwardButton = document.querySelector('.forward');
     const backwardButton = document.querySelector('.backward');
     const teamCards = document.querySelector('.team__card-container');
@@ -66,6 +69,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+//feedback/testimonial-section carousel
+
 document.addEventListener('DOMContentLoaded', function () {
     const forwardButton = document.getElementById('forward-arrow');
     const backwardButton = document.getElementById('backward-arrow');
@@ -129,11 +134,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+//navigation-menu toggling on small screens 
+
 document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.getElementById('navigation-menu');
+    const navMenu = document.getElementById('navigation-menu');
     const navLinks = document.querySelector('header');
 
-    console.log(burger);
+    console.log(navMenu);
     console.log(navLinks);
 
     burger.addEventListener('click', () => {
